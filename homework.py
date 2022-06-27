@@ -1,3 +1,6 @@
+from typing import List
+
+
 class InfoMessage:
     """Информационное сообщение о тренировке."""
     def __init__(self,
@@ -111,7 +114,7 @@ class Swimming(Training):
                + COEFF_COLORE_5) * COEFF_COLORE_6 * self.weight
 
 
-def read_package(workout_type: str, data: list[int]) -> Training:
+def read_package(workout_type: str, data: List[int]) -> Training:
     """Прочитать данные полученные от датчиков."""
     type_train = {"RUN": Running,
                   "SWM": Swimming,
